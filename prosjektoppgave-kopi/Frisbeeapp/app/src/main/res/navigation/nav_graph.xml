@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/mapsFragment">
+
+    <fragment
+        android:id="@+id/courseListFragment"
+        android:name="com.example.frisbeeapp.fragments.CourseListFragment"
+        android:label="fragment_course_list"
+        tools:layout="@layout/fragment_course_list">
+        <action
+            android:id="@+id/action_courseListFragment_to_courseFragment"
+            app:destination="@id/courseFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/mapsFragment"
+        android:name="com.example.frisbeeapp.fragments.MapsFragment"
+        android:label="fragment_maps"
+        tools:layout="@layout/fragment_maps">
+        <action
+            android:id="@+id/action_mapsFragment_to_courseFragment"
+            app:destination="@id/courseFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/rulesFragment"
+        android:name="com.example.frisbeeapp.fragments.RulesFragment"
+        android:label="fragment_rules"
+        tools:layout="@layout/fragment_rules" />
+    <fragment
+        android:id="@+id/courseFragment"
+        android:name="com.example.frisbeeapp.fragments.CourseFragment"
+        android:label="fragment_course"
+        tools:layout="@layout/fragment_course">
+        <action
+            android:id="@+id/action_courseFragment_to_scoreBoardFragment"
+            app:destination="@id/scoreBoardFragment" />
+        <action
+            android:id="@+id/action_courseFragment_to_courseListFragment"
+            app:destination="@id/courseListFragment" />
+        <action
+            android:id="@+id/action_courseFragment_to_imageFullScreenFragment"
+            app:destination="@id/imageFullScreenFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/scoreBoardFragment"
+        android:name="com.example.frisbeeapp.fragments.ScoreBoardFragment"
+        android:label="fragment_score_board"
+        tools:layout="@layout/fragment_score_board" />
+    <fragment
+        android:id="@+id/imageFullScreenFragment"
+        android:name="com.example.frisbeeapp.fragments.ImageFullScreenFragment"
+        android:label="fragment_image_full_screen"
+        tools:layout="@layout/fragment_image_full_screen">
+        <action
+            android:id="@+id/action_imageFullScreenFragment_to_courseFragment"
+            app:destination="@id/courseFragment" />
+    </fragment>
+</navigation>

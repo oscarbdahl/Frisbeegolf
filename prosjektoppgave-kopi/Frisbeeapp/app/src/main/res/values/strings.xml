@@ -1,0 +1,69 @@
+<resources>
+    <string name="app_name">Frisbeeapp</string>
+    <string name="course_image">course image</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="courses">Baner</string>
+    <string name="map">Kart</string>
+    <string name="rules">Regler</string>
+    <string name="opprett_score_board">Opprett poengkort</string>
+    <string name="_0_m_s">0 m/s</string>
+    <string name="_0">0°</string>
+    <string name="_0_mm">0 mm</string>
+    <string name="regelOverskrift"><u>REGLER</u></string>
+    <string-array name="alleRegler">
+        <item><b>Superenkle regler</b></item>
+        <item><b>Etikette</b></item>
+        <item><b>Sikkerhetsregler</b></item>
+        <item><b>Kasterekkefølge</b></item>
+        <item><b>Markering av disk</b></item>
+        <item><b>Mandatory/Mando</b></item>
+        <item><b>Out of Bounds/OB</b></item>
+        <item><b>Hazard</b></item>
+        <item><b>Fulle regler</b></item>
+    </string-array>
+    <string name="superenkleRegler">
+    Aldri kast om det er fare for å treffe noen eller du ikke kan se hvor frisbeen vil lande\n\n
+    Du har vikeplikt for alle som ikke kaster frisbee\n\n
+    Aldri knekk greiner eller trær (dersom man skal jukse, er det bedre å gå inn igjen på banen)\n\n
+    Du skal stå rett bak der disken landet når du kaster videre\n\n
+        OB – er område man ikke har lov å lande i. Man vil få et straffekast, og kaste neste kast fra drop-zone eller fra forrige kast\n\n
+    Hazard – er et område man helst ikke skal lande i. Man vil få et straffekast, men kaster neste kast fra der frisbeen ligger\n\n
+    Mando – en hindring man må kaste på en gitt side av. Flyr disken på ulovlig området får man et straffekast og må kaste neste kast fra drop-zone\n\n
+    Slipp forbi grupper som er raskere enn deg\n\n
+    Vis hensyn til andre spillere og naboer\n\n
+    Alt av søppel tas med hjem eller kastes i søppelkasse (ikke alltid det er mange søppelkasser rundt banene)\n
+    </string>
+    <string name="textview">TextView</string>
+    <string name="velgeregel">VelgeRegel</string>
+    <string name="hva_vil_du_vite_mer_om">Hva vil du vite mer om?</string>
+    <string name="usikker_p_hvem_av_dere_som_har_rett">Usikker på hvem av dere som har rett?</string>
+
+
+    <string name="hull_1">1</string>
+    <string name="hull_2">2</string>
+    <string name="hull_3">3</string>
+    <string name="hull_4">4</string>
+    <string name="hull_5">5</string>
+    <string name="hull_6">6</string>
+    <string name="hull_7">7</string>
+    <string name="hull_8">8</string>
+    <string name="hull_9">9</string>
+    <string name="hull_10">10</string>
+    <string name="hull_11">11</string>
+    <string name="hull_12">12</string>
+    <string name="hull_13">13</string>
+    <string name="hull_14">14</string>
+    <string name="hull_15">15</string>
+    <string name="hull_16">16</string>
+    <string name="hull_17">17</string>
+    <string name="hull_18">18</string>
+
+    <string name="par">Par</string>
+    <string name="total">Total</string>
+    <string name="score">Poeng</string>
+    <string name="regn_score">Beregn poeng</string>
+    <string name="antall_kast">ANTALL KAST</string>
+    <string name="_0_">0</string>
+    <string name="bilde_av_frisbeegolf_kurv">Bilde av frisbeegolf kurv</string>
+    <string name="pil_som_indikerer_scrolleretning_nedover">Pil som indikerer scrolleretning nedover</string>
+</resources>

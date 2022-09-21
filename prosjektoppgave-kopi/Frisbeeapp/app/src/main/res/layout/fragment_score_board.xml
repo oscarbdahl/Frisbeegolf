@@ -1,0 +1,809 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".fragments.ScoreBoardFragment"
+    android:background="@color/baby_blue">
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:scrollbars="none"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop ="40dp"
+            android:paddingBottom="80dp">
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingTop="20dp"
+                android:gravity="center">
+
+                <TextView
+                    android:id="@+id/tekstPar"
+                    android:layout_column="0"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:paddingLeft="50dp"
+                    android:text="@string/par"
+                    android:textSize="24sp"
+                    android:textColor="@color/black"/>
+
+                <TextView
+                    android:id="@+id/parTotal"
+                    android:layout_column="2"
+                    android:textColor="@color/black"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:textSize="24sp" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center">
+
+                <TextView
+                    android:id="@+id/tekstTotal"
+                    android:layout_column="0"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:paddingLeft="50dp"
+                    android:text="@string/total"
+                    android:textColor="@color/black"
+                    android:textSize="24sp" />
+
+                <TextView
+                    android:id="@+id/visTotal"
+                    android:layout_column="2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:textSize="24sp"
+                    android:textColor="@color/black"/>
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center">
+
+                <TextView
+                    android:id="@+id/tekstScore"
+                    android:layout_column="0"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:paddingLeft="50dp"
+                    android:text="@string/score"
+                    android:textSize="24sp"
+                    android:textColor="@color/black"/>
+
+                <TextView
+                    android:id="@+id/score"
+                    android:layout_column="2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:textSize="24sp"
+                    android:textColor="@color/black"/>
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:paddingBottom="40dp">
+
+                <Button
+                    android:id="@+id/regnTotal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_column="2"
+                    android:text="@string/regn_score"
+                    android:textColor="@color/black"/>
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingTop="30dp"
+                android:gravity="center">
+
+                <TextView
+                    android:id="@+id/overskriftAntallKast"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_column="2"
+                    android:text="@string/antall_kast"
+                    android:textSize="20sp"
+                    android:textColor="@color/black"
+                    android:gravity="center"/>
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="10dp">
+
+                <ImageView
+                    android:id="@+id/scorekurv1"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:src="@drawable/scorekurv"
+                    android:layout_gravity="center_vertical" />
+
+                <TextView
+                    android:id="@+id/tekstHull1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_column="1"
+                    android:layout_gravity="bottom"
+                    android:padding="10dp"
+                    android:text="@string/hull_1"
+                    android:textColor="@color/black"
+                    android:textSize="30sp" />
+
+                <EditText
+                    android:id="@+id/hull1Input"
+                    android:layout_width="238dp"
+                    android:layout_height="wrap_content"
+                    android:layout_column="2"
+                    android:layout_gravity="bottom"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:minHeight="48dp"
+                    android:textColor="@color/black"
+                    android:textSize="25sp"
+                    android:hint="@string/_0_"/>
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="10dp">
+
+                <ImageView
+                    android:id="@+id/scorekurv2"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:src="@drawable/scorekurv"
+                    android:layout_gravity="center_vertical"/>
+
+                <TextView
+                    android:id="@+id/tekstHull2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_column="1"
+                    android:layout_gravity="bottom"
+                    android:padding="10dp"
+                    android:text="@string/hull_2"
+                    android:textColor="@color/black"
+                    android:textSize="30sp" />
+
+                <EditText
+                    android:id="@+id/hull2Input"
+                    android:layout_width="238dp"
+                    android:layout_height="wrap_content"
+                    android:layout_column="2"
+                    android:layout_gravity="bottom"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:minHeight="48dp"
+                    android:textColor="@color/black"
+                    android:textSize="25sp"
+                    android:hint="@string/_0_"/>
+            </TableRow>
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="10dp">
+
+                <ImageView
+                    android:id="@+id/scorekurv3"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:src="@drawable/scorekurv"
+                    android:layout_gravity="center_vertical"/>
+
+                <TextView
+                    android:id="@+id/tekstHull3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_column="1"
+                    android:layout_gravity="bottom"
+                    android:padding="10dp"
+                    android:text="@string/hull_3"
+                    android:textColor="@color/black"
+                    android:textSize="30sp" />
+
+                <EditText
+                    android:id="@+id/hull3Input"
+                    android:layout_width="238dp"
+                    android:layout_height="wrap_content"
+                    android:layout_column="2"
+                    android:layout_gravity="bottom"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:minHeight="48dp"
+                    android:textColor="@color/black"
+                    android:textSize="25sp"
+                    android:hint="@string/_0_"/>
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="10dp">
+
+                <ImageView
+                    android:id="@+id/scorekurv4"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:src="@drawable/scorekurv"
+                    android:layout_gravity="center_vertical"/>
+
+                <TextView
+                    android:id="@+id/tekstHull4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_column="1"
+                    android:layout_gravity="bottom"
+                    android:padding="10dp"
+                    android:text="@string/hull_4"
+                    android:textColor="@color/black"
+                    android:textSize="30sp" />
+
+                <EditText
+                    android:id="@+id/hull4Input"
+                    android:layout_width="238dp"
+                    android:layout_height="wrap_content"
+                    android:layout_column="2"
+                    android:layout_gravity="bottom"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:minHeight="48dp"
+                    android:textColor="@color/black"
+                    android:textSize="25sp"
+                    android:hint="@string/_0_" />
+            </TableRow>
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="10dp">
+
+                <ImageView
+                    android:id="@+id/scorekurv5"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:src="@drawable/scorekurv"
+                    android:layout_gravity="center_vertical"/>
+
+                <TextView
+                    android:id="@+id/tekstHull5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_column="1"
+                    android:layout_gravity="bottom"
+                    android:padding="10dp"
+                    android:text="@string/hull_5"
+                    android:textColor="@color/black"
+                    android:textSize="30sp" />
+
+                <EditText
+                    android:id="@+id/hull5Input"
+                    android:layout_width="238dp"
+                    android:layout_height="wrap_content"
+                    android:layout_column="2"
+                    android:layout_gravity="bottom"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:minHeight="48dp"
+                    android:textColor="@color/black"
+                    android:textSize="25sp"
+                    android:hint="@string/_0_"/>
+            </TableRow>
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="10dp">
+
+                <ImageView
+                    android:id="@+id/scorekurv6"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:src="@drawable/scorekurv"
+                    android:layout_gravity="center_vertical"/>
+
+                <TextView
+                    android:id="@+id/tekstHull6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_column="1"
+                    android:layout_gravity="bottom"
+                    android:padding="10dp"
+                    android:text="@string/hull_6"
+                    android:textColor="@color/black"
+                    android:textSize="30sp" />
+
+                <EditText
+                    android:id="@+id/hull6Input"
+                    android:layout_width="238dp"
+                    android:layout_height="wrap_content"
+                    android:layout_column="2"
+                    android:layout_gravity="bottom"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:minHeight="48dp"
+                    android:textColor="@color/black"
+                    android:textSize="25sp"
+                    android:hint="@string/_0_"/>
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="10dp">
+
+                <ImageView
+                    android:id="@+id/scorekurv7"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:src="@drawable/scorekurv"
+                    android:layout_gravity="center_vertical"/>
+
+                <TextView
+                    android:id="@+id/tekstHull7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_column="1"
+                    android:layout_gravity="bottom"
+                    android:padding="10dp"
+                    android:text="@string/hull_7"
+                    android:textColor="@color/black"
+                    android:textSize="30sp" />
+
+                <EditText
+                    android:id="@+id/hull7Input"
+                    android:layout_width="238dp"
+                    android:layout_height="wrap_content"
+                    android:layout_column="2"
+                    android:layout_gravity="bottom"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:minHeight="48dp"
+                    android:textColor="@color/black"
+                    android:textSize="25sp"
+                    android:hint="@string/_0_"/>
+            </TableRow>
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="10dp">
+
+                <ImageView
+                    android:id="@+id/scorekurv8"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:src="@drawable/scorekurv"
+                    android:layout_gravity="center_vertical"/>
+
+                <TextView
+                    android:id="@+id/tekstHull8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_column="1"
+                    android:layout_gravity="bottom"
+                    android:padding="10dp"
+                    android:text="@string/hull_8"
+                    android:textColor="@color/black"
+                    android:textSize="30sp" />
+
+                <EditText
+                    android:id="@+id/hull8Input"
+                    android:layout_width="238dp"
+                    android:layout_height="wrap_content"
+                    android:layout_column="2"
+                    android:layout_gravity="bottom"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:minHeight="48dp"
+                    android:textColor="@color/black"
+                    android:textSize="25sp"
+                    android:hint="@string/_0_"/>
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="10dp">
+
+                <ImageView
+                    android:id="@+id/scorekurv9"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:src="@drawable/scorekurv"
+                    android:layout_gravity="center_vertical"/>
+
+                <TextView
+                    android:id="@+id/tekstHull9"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_column="1"
+                    android:layout_gravity="bottom"
+                    android:padding="10dp"
+                    android:text="@string/hull_9"
+                    android:textColor="@color/black"
+                    android:textSize="30sp" />
+
+                <EditText
+                    android:id="@+id/hull9Input"
+                    android:layout_width="238dp"
+                    android:layout_height="wrap_content"
+                    android:layout_column="2"
+                    android:layout_gravity="bottom"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:minHeight="48dp"
+                    android:textColor="@color/black"
+                    android:textSize="25sp"
+                    android:hint="@string/_0_"/>
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="10dp">
+
+                <ImageView
+                    android:id="@+id/scorekurv10"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:src="@drawable/scorekurv"
+                    android:layout_gravity="center_vertical"/>
+
+                <TextView
+                    android:id="@+id/tekstHull10"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_column="1"
+                    android:layout_gravity="bottom"
+                    android:padding="10dp"
+                    android:text="@string/hull_10"
+                    android:textColor="@color/black"
+                    android:textSize="30sp" />
+
+                <EditText
+                    android:id="@+id/hull10Input"
+                    android:layout_width="238dp"
+                    android:layout_height="wrap_content"
+                    android:layout_column="2"
+                    android:layout_gravity="bottom"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:minHeight="48dp"
+                    android:textColor="@color/black"
+                    android:textSize="25sp"
+                    android:hint="@string/_0_"/>
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="10dp">
+
+                <ImageView
+                    android:id="@+id/scorekurv11"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:src="@drawable/scorekurv"
+                    android:layout_gravity="center_vertical"/>
+
+                <TextView
+                    android:id="@+id/tekstHull11"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_column="1"
+                    android:layout_gravity="bottom"
+                    android:padding="10dp"
+                    android:text="@string/hull_11"
+                    android:textColor="@color/black"
+                    android:textSize="30sp" />
+
+                <EditText
+                    android:id="@+id/hull11Input"
+                    android:layout_width="238dp"
+                    android:layout_height="wrap_content"
+                    android:layout_column="2"
+                    android:layout_gravity="bottom"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:minHeight="48dp"
+                    android:textColor="@color/black"
+                    android:textSize="25sp"
+                    android:hint="@string/_0_"/>
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="10dp">
+
+                <ImageView
+                    android:id="@+id/scorekurv12"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:src="@drawable/scorekurv"
+                    android:layout_gravity="center_vertical"/>
+
+                <TextView
+                    android:id="@+id/tekstHull12"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_column="1"
+                    android:layout_gravity="bottom"
+                    android:padding="10dp"
+                    android:text="@string/hull_12"
+                    android:textColor="@color/black"
+                    android:textSize="30sp" />
+
+                <EditText
+                    android:id="@+id/hull12Input"
+                    android:layout_width="238dp"
+                    android:layout_height="wrap_content"
+                    android:layout_column="2"
+                    android:layout_gravity="bottom"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:minHeight="48dp"
+                    android:textColor="@color/black"
+                    android:textSize="25sp"
+                    android:hint="@string/_0_"/>
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="10dp">
+
+                <ImageView
+                    android:id="@+id/scorekurv13"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:src="@drawable/scorekurv"
+                    android:layout_gravity="center_vertical"/>
+
+                <TextView
+                    android:id="@+id/tekstHull13"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_column="1"
+                    android:layout_gravity="bottom"
+                    android:padding="10dp"
+                    android:text="@string/hull_13"
+                    android:textColor="@color/black"
+                    android:textSize="30sp" />
+
+                <EditText
+                    android:id="@+id/hull13Input"
+                    android:layout_width="238dp"
+                    android:layout_height="wrap_content"
+                    android:layout_column="2"
+                    android:layout_gravity="bottom"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:minHeight="48dp"
+                    android:textColor="@color/black"
+                    android:textSize="25sp"
+                    android:hint="@string/_0_"/>
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="10dp">
+
+                <ImageView
+                    android:id="@+id/scorekurv14"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:src="@drawable/scorekurv"
+                    android:layout_gravity="center_vertical"/>
+
+                <TextView
+                    android:id="@+id/tekstHull14"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_column="1"
+                    android:layout_gravity="bottom"
+                    android:padding="10dp"
+                    android:text="@string/hull_14"
+                    android:textColor="@color/black"
+                    android:textSize="30sp" />
+
+                <EditText
+                    android:id="@+id/hull14Input"
+                    android:layout_width="238dp"
+                    android:layout_height="wrap_content"
+                    android:layout_column="2"
+                    android:layout_gravity="bottom"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:minHeight="48dp"
+                    android:textColor="@color/black"
+                    android:textSize="25sp"
+                    android:hint="@string/_0_"/>
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="10dp">
+
+                <ImageView
+                    android:id="@+id/scorekurv15"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:src="@drawable/scorekurv"
+                    android:layout_gravity="center_vertical"/>
+
+                <TextView
+                    android:id="@+id/tekstHull15"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_column="1"
+                    android:layout_gravity="bottom"
+                    android:padding="10dp"
+                    android:text="@string/hull_15"
+                    android:textColor="@color/black"
+                    android:textSize="30sp" />
+
+                <EditText
+                    android:id="@+id/hull15Input"
+                    android:layout_width="238dp"
+                    android:layout_height="wrap_content"
+                    android:layout_column="2"
+                    android:layout_gravity="bottom"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:minHeight="48dp"
+                    android:textColor="@color/black"
+                    android:textSize="25sp"
+                    android:hint="@string/_0_"/>
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="10dp">
+
+                <ImageView
+                    android:id="@+id/scorekurv16"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:src="@drawable/scorekurv"
+                    android:layout_gravity="center_vertical"/>
+
+                <TextView
+                    android:id="@+id/tekstHull16"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_column="1"
+                    android:layout_gravity="bottom"
+                    android:padding="10dp"
+                    android:text="@string/hull_16"
+                    android:textColor="#000000"
+                    android:textSize="30sp" />
+
+                <EditText
+                    android:id="@+id/hull16Input"
+                    android:layout_width="238dp"
+                    android:layout_height="wrap_content"
+                    android:layout_column="2"
+                    android:layout_gravity="bottom"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:minHeight="48dp"
+                    android:textColor="@color/black"
+                    android:textSize="25sp"
+                    android:hint="@string/_0_"/>
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="10dp">
+
+                <ImageView
+                    android:id="@+id/scorekurv17"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:src="@drawable/scorekurv"
+                    android:layout_gravity="center_vertical"/>
+
+                <TextView
+                    android:id="@+id/tekstHull17"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_column="1"
+                    android:layout_gravity="bottom"
+                    android:padding="10dp"
+                    android:text="@string/hull_17"
+                    android:textColor="@color/black"
+                    android:textSize="30sp" />
+
+                <EditText
+                    android:id="@+id/hull17Input"
+                    android:layout_width="238dp"
+                    android:layout_height="wrap_content"
+                    android:layout_column="2"
+                    android:layout_gravity="bottom"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:minHeight="48dp"
+                    android:textColor="@color/black"
+                    android:textSize="25sp"
+                    android:hint="@string/_0_"/>
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="10dp">
+
+                <ImageView
+                    android:id="@+id/scorekurv18"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:src="@drawable/scorekurv"
+                    android:layout_gravity="center_vertical"/>
+
+                <TextView
+                    android:id="@+id/tekstHull18"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_column="1"
+                    android:layout_gravity="bottom"
+                    android:padding="10dp"
+                    android:text="@string/hull_18"
+                    android:textColor="@color/black"
+                    android:textSize="30sp" />
+
+                <EditText
+                    android:id="@+id/hull18Input"
+                    android:layout_width="238dp"
+                    android:layout_height="wrap_content"
+                    android:layout_column="2"
+                    android:layout_gravity="bottom"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:minHeight="48dp"
+                    android:textColor="@color/black"
+                    android:textSize="25sp"
+                    android:hint="@string/_0_"/>
+            </TableRow>
+
+        </TableLayout>
+
+    </ScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

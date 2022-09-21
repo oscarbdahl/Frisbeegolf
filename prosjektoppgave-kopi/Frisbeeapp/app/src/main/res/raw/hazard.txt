@@ -1,0 +1,1 @@
+﻿Lander disken i en Hazard, vil man få straffekast på samme måte som OB. Men neste kast må allikevel kastes fra der disken landet i hazard-området. Man vil få ett nytt straffekast for hver gang disken havner i et hazard-området (selv om utkastet også var fra et hazard-området)

@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/scrollview"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.RulesFragment"
+    android:background="@color/light_peach">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:context=".RulesFragment"
+        android:paddingBottom="70dp">
+
+        <ImageView
+            android:id="@+id/kurvBilde"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="20dp"
+            android:paddingTop="50dp"
+            android:paddingBottom="10dp"
+            android:src="@drawable/kurv"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/overskrift"
+            android:contentDescription="@string/bilde_av_frisbeegolf_kurv" />
+
+        <TextView
+            android:id="@+id/overskrift"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/regelOverskrift"
+            android:textSize="30sp"
+            android:textColor="@color/black"
+            android:padding="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/kurvBilde"
+            app:layout_constraintBottom_toTopOf="@id/introRegler"/>
+
+        <TextView
+            android:id="@+id/introRegler"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/usikker_p_hvem_av_dere_som_har_rett"
+            android:textSize="21sp"
+            android:textColor="@color/black"
+            android:paddingHorizontal="20dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="20dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/overskrift"
+            app:layout_constraintBottom_toTopOf="@id/pil"
+            />
+
+        <ImageView
+            android:id="@+id/pil"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="20dp"
+            android:paddingTop="25dp"
+            android:paddingBottom="25dp"
+            android:src="@drawable/regelpil"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/introRegler"
+            app:layout_constraintBottom_toTopOf="@+id/hvaVilDuViteMerOm"
+            android:contentDescription="@string/pil_som_indikerer_scrolleretning_nedover" />
+
+        <TextView
+            android:id="@+id/hvaVilDuViteMerOm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/hva_vil_du_vite_mer_om"
+            android:textSize="21sp"
+            android:padding="20dp"
+            android:textColor="@color/black"
+            app:layout_constraintBottom_toTopOf="@+id/spinner"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/pil" />
+
+        <Spinner
+            android:id="@+id/spinner"
+            android:layout_width="283dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="544dp"
+            android:contentDescription="@string/velgeregel"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+            app:layout_constraintBottom_toBottomOf="@id/valgtRegel"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/hvaVilDuViteMerOm" />
+
+        <TextView
+            android:id="@+id/valgtRegel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:textColor="@color/black"
+            android:padding="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/spinner"
+            />
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>
